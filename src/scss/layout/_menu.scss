@@ -1,0 +1,187 @@
+.burger__menu {
+    background-color: #fff;
+    height: 100vh;
+    left: -100%;
+    max-height: 100vh;
+    min-width: 340px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: calc(42% - 54px);
+    z-index: 99999;
+    border-right: 1px solid rgba(96, 125, 139, 0.12);
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+    &.active {
+        -webkit-transition: left 0.5s;
+        transition: left 0.5s;
+        display: block;
+        left: 0;
+    }
+
+    .exit__btn {
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        padding-top: 8px;
+        padding-right: 16px;
+        .exit {
+            position: relative;
+            right: 0;
+            width: 30px;
+            margin-left: 4px;
+            height: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 30px;
+                height: 3px;
+                background: #285aeb;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+        
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+
+    .location {
+        padding: 16px;
+    }
+
+    &-top {
+        border-bottom: 1px solid rgba(96, 125, 139, 0.12);
+        display: flex;
+        align-items: center;
+    }
+
+    &-item {
+        border-bottom: 1px solid rgba(96, 125, 139, 0.12);
+        .title {
+            color: #5a727d;
+            font-size: 14px;
+            letter-spacing: 0.25px;
+            line-height: 20px;
+            margin-top: 16px;
+            padding: 0 8px 0 16px;
+        }
+        a {
+            display: block;
+            padding: 12px 0px;
+            width: 100%;
+        }
+    }
+    &-list {
+        li {
+            color: #263238;
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.1px;
+            line-height: 24px;
+            padding: 0;
+            position: relative;
+            transition: 0.3s;
+            border-bottom: 1px solid rgba(96, 125, 139, 0.12);
+            a {
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                letter-spacing: inherit;
+                line-height: inherit;
+                display: block;
+                padding: 14px 0 14px 16px;
+                width: 100%;
+                display: flex;
+                gap: 18px;
+                i {
+                    color: #448aff;
+                    font-size: 20px;
+                }
+                &:hover {
+                    transition: 0.3s;
+                    color: #448aff;
+                    background-color: rgba(142, 172, 187, 0.1);
+                }
+            }
+        }
+    }
+
+    &-social {
+        display: flex;
+        gap: 16px;
+        padding: 8px 16px;
+        a {
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            transition: 0.3s;
+            &:hover {
+                border-radius: 8px;
+                background: rgba(142, 172, 187, 0.2);
+                transition: 0.3s;
+            }
+        }
+        .youtube {
+            color: #fe0000;
+            font-size: 28px;
+        }
+        .telegram {
+            color: #239fdb;
+        }
+        .facebook {
+            color: #2574bb;
+        }
+        .instagram {
+            color: #d6249f;
+            color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+        }
+    }
+
+    .select__city {
+        width: 100%;
+        max-width: 100%;
+        select {
+            padding-left: 34px;
+        }
+    }
+}
+
+.overlay {
+    background-color: #000;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 4;
+    &.active {
+        opacity: 0.4;
+        visibility: visible;
+    }
+}
+
+body.active {
+    overflow: hidden;
+}

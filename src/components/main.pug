@@ -1,0 +1,585 @@
+mixin main()
+    section.main__section.container 
+        main  
+            section.main 
+                h1.main_title Погода в Ташкенте на сегодня
+                h2.main_subtitle Сейчас в Ташкенте 16:20 - 25 Января, Среда
+                .temperature
+                    .temperature-today
+                        .temperature-today_tem 
+                            span -3°
+                            .icon 
+                        .feels 
+                            | По ощущениям
+                            span -2°
+                            .cool Прохладно
+                            .normal Нормально
+                            .verycold Очень холодно
+                            .warm Тепло
+                    ul.temperature-hourly
+                        li
+                            span.when Ночью
+                            .icon 
+                            span.temp -3°
+                            span.feel Прохладно
+                        li
+                            span.when Утром
+                            .icon 
+                            span.temp -3°
+                            span.feel Прохладно
+                        li
+                            span.when Днём
+                            .icon 
+                            span.temp -0°
+                            span.feel Прохладно
+                        li
+                            span.when Вечером
+                            .icon 
+                            span.temp -2°
+                            span.feel Прохладно
+                h3.main_feel Облачно с прояснениями, без осадков
+                .atmosphere 
+                    ul
+                        li 
+                            p Вероятность осадков
+                            .atmosphere-spec
+                                i.fa-solid.fa-umbrella
+                                span   0
+                                p   %
+                        li 
+                            p Ветер
+                            .atmosphere-spec
+                                img(src="img/icons/wind-icon.svg" alt="wind")
+                                span   1
+                                p  м/с
+                        li 
+                            p Давление
+                            .atmosphere-spec
+                                i.fa-solid.fa-ruler-vertical
+                                span   629
+                        li 
+                            p УФ индес
+                            .atmosphere-spec
+                                b UV
+                                span   3/12
+                        li 
+                            p Влажность
+                            .atmosphere-spec
+                                i.fa-solid.fa-droplet
+                                span   30
+                                p   %
+                        li 
+                            p Осадки
+                            .atmosphere-spec
+                                i.fa-solid.fa-water
+                                span   0
+                                p мм
+                p.main_info Прогноз погоды обновлен в 10:07 © Meteoprog.com
+
+            section.day_by_day
+                .swiper
+                    .swiper_item.active  
+                        h6 Сегодня
+                        span 27 января
+                        .tem
+                            .icon 
+                            div 
+                                .max -8°C
+                                .min -1°C
+                    .swiper_item   
+                        h6 Завтра
+                        span 28 января
+                        .tem
+                            .icon 
+                            div 
+                                .max -8°C
+                                .min -1°C
+                    .swiper_item   
+                        h6 Воскресенье
+                        span 28 января
+                        .tem
+                            .icon 
+                            div 
+                                .max -8°C
+                                .min -1°C
+                    .swiper_item   
+                        h6 Понедельник
+                        span 28 января
+                        .tem
+                            .icon 
+                            div 
+                                .max -8°C
+                                .min -1°C
+                    .swiper_item
+                        a(href="#") 
+                            h6 Неделя
+                            i.fa-solid.fa-arrow-right
+                    //- .swiper_item   
+                    //-     h6 Завтра
+                    //-     span 28 января
+                    //-     .tem
+                    //-         .icon 
+                    //-         div 
+                    //-             .max -8°C
+                    //-             .min -1°C
+                .info 
+                    .info_item 
+                        .times_of_day 
+                            ul 
+                                li.title Ночью
+                                li.icon
+                                li.tem +2°C
+                                li.feels 
+                                    | Ощущается 
+                                    br
+                                    | как 
+                                    b +2°C
+                                li.weather_info 
+                                    i.fa-solid.fa-umbrella
+                                    b 0%
+                                li.weather_info 
+                                    i.fa-solid.fa-water
+                                    | 0
+                                    small  мм
+                                li.weather_info 
+                                    i.fa-solid.fa-left-long.wind
+                                    | 2
+                                    small  м/с
+                                li.weather_info 
+                                    i.fa-solid.fa-droplet
+                                    | 40%
+                                li.weather_info 
+                                    i.fa-solid.fa-ruler-vertical
+                                    | 629 
+                                    small мм
+                            ul 
+                                li.title Утром
+                                li.icon
+                                li.tem +2°C
+                                li.feels 
+                                    | Ощущается 
+                                    br
+                                    | как 
+                                    b +2°C
+                                li.weather_info 
+                                    i.fa-solid.fa-umbrella
+                                    b  0%
+                                li.weather_info 
+                                    i.fa-solid.fa-water
+                                    | 0
+                                    small  мм
+                                li.weather_info 
+                                    i.fa-solid.fa-left-long.wind
+                                    | 2
+                                    small  м/с
+                                li.weather_info 
+                                    i.fa-solid.fa-droplet
+                                    | 40%
+                                li.weather_info 
+                                    i.fa-solid.fa-ruler-vertical
+                                    | 629 
+                                    small мм
+                            ul 
+                                li.title Днём
+                                li.icon
+                                li.tem +2°C
+                                li.feels 
+                                    | Ощущается 
+                                    br
+                                    | как 
+                                    b +2°C
+                                li.weather_info 
+                                    i.fa-solid.fa-umbrella
+                                    b  0%
+                                li.weather_info 
+                                    i.fa-solid.fa-water
+                                    | 0
+                                    small  мм
+                                li.weather_info 
+                                    i.fa-solid.fa-left-long.wind
+                                    | 2
+                                    small  м/с
+                                li.weather_info 
+                                    i.fa-solid.fa-droplet
+                                    | 40%
+                                li.weather_info 
+                                    i.fa-solid.fa-ruler-vertical
+                                    | 629 
+                                    small мм
+                            ul 
+                                li.title Вечером
+                                li.icon
+                                li.tem +2°C
+                                li.feels 
+                                    | Ощущается 
+                                    br
+                                    | как 
+                                    b +2°C
+                                li.weather_info 
+                                    i.fa-solid.fa-umbrella
+                                    b  0%
+                                li.weather_info 
+                                    i.fa-solid.fa-water
+                                    | 0
+                                    small  мм
+                                li.weather_info 
+                                    i.fa-solid.fa-left-long.wind
+                                    | 2
+                                    small  м/с
+                                li.weather_info 
+                                    i.fa-solid.fa-droplet
+                                    | 40%
+                                li.weather_info 
+                                    i.fa-solid.fa-ruler-vertical
+                                    | 629 
+                                    small мм
+                        span.description Погода в Ташкенте: Облачно, без осадков
+                    .overall_day 
+                        .box
+                            h3 Астрономия
+                            ul 
+                                li 
+                                    .day_icon.sun
+                                    .text 
+                                        span Восход
+                                        b 07:37
+                                li 
+                                    .day_icon.sunset
+                                    .text 
+                                        span Закат
+                                        b 17:34
+                                li 
+                                    .day_icon.sunny
+                                    .text 
+                                        span Световой день
+                                        b 09:57:24
+                                li 
+                                    .day_icon.moon
+                                    .text 
+                                        span Фаза луны
+                                        b Первая четверть
+                        a.overall_day-btn почасовой
+                            i.fa-solid.fa-chevron-right
+
+            section.information 
+                h2.section__title Ташкент: справочная информация
+                .information__box 
+                    .information__tab 
+                        .information__btn.active Астрономия
+                        .information__btn География
+                    .information__items
+                        .tabsContentItem.active
+                            .day__circle
+                                a.day__circle-timezone(href="#") Местное время GMT +5
+                                h3.day__circle-time 03:53
+                                .day__circle-wrapper 
+                                    .circle__item 
+                                        .circle__icon 
+                                        .circle__text  
+                                            .day__status Световой день
+                                            .day__time 10:03:59
+                                    .circle__center 
+                                        .circle__item 
+                                            .circle__icon.sunrise
+                                            .circle__text  
+                                                .day__status Восход
+                                                .day__time 07:34
+                                        .earth
+                                        .circle__item 
+                                            .circle__icon.sunset
+                                            .circle__text  
+                                                .day__status Закат
+                                                .day__time 17:38
+                                    .circle__item.moon
+                                        .circle__icon 🌓
+                                        .circle__text  
+                                            .day__status Световой день
+                                            .day__time полная
+                        .tabsContentItem 
+                            .twilight__info 
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-location-crosshairs
+                                    div
+                                        h3 Географические координаты
+                                        span 41° 19′ 1″ с.ш. 69° 15′ 0″ в.д.
+                                .twilight__info-item
+                                    span 
+                                        i.fa-regular.fa-compass
+                                    div
+                                        h3 Десятичные координаты
+                                        span 41,32 69,25
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-water
+                                    div
+                                        h3 Высота над уровнем моря
+                                        span 456 м
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-people-group
+                                    div
+                                        h3 Население
+                                        span 2 909 500 человек
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-star-of-life
+                                    div
+                                        h3 Сумерки Гражданские
+                                        span 07:06 / 18:06
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-star-of-life
+                                    div
+                                        h3 Сумерки Астрономические
+                                        span 06:00 / 19:12
+                                .twilight__info-item
+                                    span 
+                                        i.fa-solid.fa-star-of-life
+                                    div
+                                        h3 Сумерки Навигационные
+                                        span 06:33 / 18:39
+
+            section.day_history 
+                .day_history-header 
+                    .info 
+                        h3 День в истории
+                        .date 30 Января 
+                    .logo
+                        img(src="img/icons/pie.svg" alt="pie") 
+                .day_history-content 
+                    p Максимальная температура воздуха, зарегистрированная в Ташкенте за последние 74 года наблюдений составляет +18°C, зафиксирована 30 января 2007 года.
+                    p Самые сильные осадки в Ташкенте были зарегистрированы 30 января 2019 года — 16,86 мм. Максимальные порывы ветра были в 2014 году — до 12,44 м/с.
+                    p Абсолютный минимум -17,3°C был зафиксирован в 1971 году. Среднее значение температуры для этого дня +8,6°C.
+
+            section.map 
+                h2.section__title Погода на карте
+                .map__item 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.5026400951!2d69.13928184107841!3d41.28251254496256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1675331091803!5m2!1sru!2s" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            section.regions 
+                h2.section__title Погода на карте
+                .regions__wrapper 
+                    .regions__header 
+                        .regions__pick.active Узбекистан
+                        .regions__pick Мир
+                    .regions__content
+                        ul.regions__list.active
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                            li.regions__list-item
+                                a(href="#").region Ташкент
+                                    .region__temperature 
+                                        .icon 
+                                        span +5°
+                        ul.regions__list
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                            li.regions__list-item
+                                a(href="#").region Лондон
+                                    .region__temperature 
+                                        .icon 
+                                        span +10°
+                    a.regions__btn все города
+                        i.fa-solid.fa-chevron-right
+
+        aside 
+            .day_history 
+                .day_history-header 
+                    .info 
+                        h3 День в истории
+                        .date 30 Января 
+                    .logo
+                        img(src="img/icons/pie.webp" alt="pie")
+                .day_history-content 
+                    p Максимальная температура воздуха, зарегистрированная в Ташкенте за последние 74 года наблюдений составляет +18°C, зафиксирована 30 января 2007 года.
+                    p Самые сильные осадки в Ташкенте были зарегистрированы 30 января 2019 года — 16,86 мм. Максимальные порывы ветра были в 2014 году — до 12,44 м/с.
+                    p Абсолютный минимум -17,3°C был зафиксирован в 1971 году. Среднее значение температуры для этого дня +8,6°C.
+
+

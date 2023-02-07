@@ -1,0 +1,63 @@
+mixin header()
+    header.header
+        .nav 
+            .container 
+                .navbar 
+                    .navbar__btn
+                        .navbar__btn-elem
+                    a(href="#").logo
+                        | pogoda
+                        span .uz
+                    .select__city
+                        .search 
+                            i.fa-solid.fa-location-dot
+                        .down
+                            i.fa-sharp.fa-solid.fa-caret-down
+                        select 
+                            option(value="Москва") Москва
+                            option(value="Ташкент" selected) Ташкент 
+                            option(value="Вашингтон") Вашингтон
+                    ul.nav__list
+                        li 
+                            a(href="#").nav__list-item Погода в Узбекистане
+                            a(href="#").nav__list-item Информеры 
+                .lang 
+                    span
+                        i.fa-solid.fa-earth-americas
+                    | RU 
+                    i.fa-sharp.fa-solid.fa-caret-down
+                    .lang__items 
+                        ul 
+                            li 
+                                a(href="") Русский
+                            li 
+                                a(href="") English 
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+        .dates   
+            .container 
+                ul.dates_list
+                    li.dates_list-item.active
+                        a(href="#") сегодня
+                    li.dates_list-item
+                        a(href="#") завтра    
+                    li.dates_list-item
+                        a(href="#") неделя   
+                    li.dates_list-item
+                        a(href="#") выходные 
+                    li.dates_list-item
+                        a(href="#") две недели
+                    li.dates_list-item
+                        a(href="#") месяц
+                    li.dates_list-item
+                        a(href="#") почасавой 
+                    li.dates_list-item
+                        a(href="#") время 
+    .advertise 
+        a(href="#" title='РЕКЛАМА') РЕКЛАМА

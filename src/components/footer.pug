@@ -1,0 +1,92 @@
+mixin footer()
+    footer
+        .container 
+            .footer__date
+                .select__city
+                    .search 
+                        i.fa-solid.fa-location-dot
+                    .down
+                        i.fa-sharp.fa-solid.fa-caret-down
+                    select 
+                        option(value="Москва") Москва
+                        option(value="Ташкент" selected) Ташкент 
+                        option(value="Вашингтон") Вашингтон
+                .select__date 
+                    ul 
+                        li.select__date-item
+                            a(href="#") сегодня
+                        li.select__date-item
+                            a(href="#") завтра    
+                        li.select__date-item
+                            a(href="#") неделя   
+                        li.select__date-item
+                            a(href="#") выходные 
+                        li.select__date-item
+                            a(href="#") две недели
+                        li.select__date-item
+                            a(href="#") месяц
+                        li.select__date-item
+                            a(href="#") почасавой 
+                        li.select__date-item
+                            a(href="#") время 
+            .footer__content 
+                a(href="#").logo
+                    | pogoda
+                    span .uz
+                .lang 
+                    span
+                        i.fa-solid.fa-earth-americas
+                    | RU 
+                    i.fa-sharp.fa-solid.fa-caret-down
+                    .lang__items 
+                        ul 
+                            li 
+                                a(href="") Русский
+                            li 
+                                a(href="") English 
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+                            li 
+                                a(href="") O'zbekcha
+            ul.footer__nav 
+                li 
+                    a(href="#") Информеры 
+                li 
+                    a(href="#") О проекте 
+                li 
+                    a(href="#") Пользовательские соглашения 
+                li 
+                    a(href="#") Правовая информация 
+                li 
+                    a(href="#") Политика конфедециальности
+                li 
+                    a(href="#") Настройки файлов cookie 
+            .footer__copyright 
+                <p>© Pogoda.uz 2022-2023</p>
+                ul.footer__social 
+                    li 
+                        a(href='#')
+                            i.fa-brands.fa-youtube.youtube
+                    li 
+                        a(href='#')
+                            i.fa-brands.fa-telegram.telegram
+                    li 
+                        a(href='#')
+                            i.fa-brands.fa-facebook.facebook
+                    li 
+                        a(href='#')
+                            i.fa-brands.fa-instagram.instagram
+
+
+
+
+
+
+
+
+
+

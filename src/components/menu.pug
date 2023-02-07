@@ -1,0 +1,51 @@
+mixin menu()
+    .burger__menu
+        .exit__btn 
+            .exit
+        .burger__menu-top.location  
+            .select__city
+                .search 
+                    i.fa-solid.fa-location-crosshairs 
+                .down
+                    i.fa-solid.fa-caret-right
+                select 
+                    option(value="Москва") Москва
+                    option(value="Ташкент" selected) Ташкент 
+                    option(value="Вашингтон") Вашингтон
+
+
+        .burger__menu-item 
+            p.title ПОГОДА  
+            ul.burger__menu-list 
+                li 
+                    a(href="#") 
+                        i.fa-solid.fa-earth-americas
+                        span Каталог стран
+                li 
+                    a(href="#") 
+                        i.fa-solid.fa-map
+                        span Погода на карте
+                li 
+                    a(href="#") 
+                        i.fa-solid.fa-water
+                        span Температура воды
+                li 
+                    a(href="#") 
+                        i.fa-solid.fa-tablet-screen-button
+                        span Погода на карте
+
+            p.title СОЦ СЕТИ  
+            ul.burger__menu-social 
+                li 
+                    a(href='#')
+                        i.fa-brands.fa-youtube.youtube
+                li 
+                    a(href='#')
+                        i.fa-brands.fa-telegram.telegram
+                li 
+                    a(href='#')
+                        i.fa-brands.fa-facebook.facebook
+                li 
+                    a(href='#')
+                        i.fa-brands.fa-instagram.instagram
+    .overlay   

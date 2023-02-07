@@ -1,0 +1,36 @@
+// Тема по умолчанию
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    caret-color: transparent;
+    font-family: "Roboto", sans-serif;
+    &:focus,
+    &:active {
+        outline: none;
+    }
+    list-style: none;
+}
+html,
+body {
+    height: 100%;
+    min-width: 360px;
+    background-color: #f5f5f5;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-bg-color: white;
+    --primary-text-color: black;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
