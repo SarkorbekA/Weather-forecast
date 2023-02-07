@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230206160945">
+    <link rel="shortcut icon" href="/img/icons/favicon.webp" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&amp;display=swap&_v=20230206160945" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css?_v=20230206160945">
+    <title>weather</title>
+  </head>
+  <body id="body"> 
+    <header class="header">
+      <div class="nav"> 
+        <div class="container"> 
+          <div class="navbar"> 
+            <div class="navbar__btn">
+              <div class="navbar__btn-elem"></div>
+            </div><a class="logo" href="#">pogoda<span>.uz</span></a>
+            <div class="select__city">
+              <div class="search"> <i class="fa-solid fa-location-dot"></i></div>
+              <div class="down"><i class="fa-sharp fa-solid fa-caret-down"></i></div>
+              <select> 
+                <option value="Москва">Москва</option>
+                <option value="Ташкент" selected="selected">Ташкент </option>
+                <option value="Вашингтон">Вашингтон</option>
+              </select>
+            </div>
+            <ul class="nav__list">
+              <li> <a class="nav__list-item" href="#">Погода в Узбекистане</a><a class="nav__list-item" href="#">Информеры </a></li>
+            </ul>
+          </div>
+          <div class="lang"> <span><i class="fa-solid fa-earth-americas"></i></span>RU <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="lang__items"> 
+              <ul> 
+                <li> <a href="">Русский</a></li>
+                <li> <a href="">English </a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dates">  
+        <div class="container"> 
+          <ul class="dates_list">
+            <li class="dates_list-item active"><a href="#">сегодня</a></li>
+            <li class="dates_list-item"><a href="#">завтра    </a></li>
+            <li class="dates_list-item"><a href="#">неделя   </a></li>
+            <li class="dates_list-item"><a href="#">выходные </a></li>
+            <li class="dates_list-item"><a href="#">две недели</a></li>
+            <li class="dates_list-item"><a href="#">месяц</a></li>
+            <li class="dates_list-item"><a href="#">почасавой </a></li>
+            <li class="dates_list-item"><a href="#">время </a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="advertise"> <a href="#" title="РЕКЛАМА">РЕКЛАМА</a></div>
+    <div class="burger__menu">
+      <div class="exit__btn"> 
+        <div class="exit"></div>
+      </div>
+      <div class="burger__menu-top location"> 
+        <div class="select__city">
+          <div class="search"> <i class="fa-solid fa-location-crosshairs"> </i></div>
+          <div class="down"><i class="fa-solid fa-caret-right"></i></div>
+          <select> 
+            <option value="Москва">Москва</option>
+            <option value="Ташкент" selected="selected">Ташкент </option>
+            <option value="Вашингтон">Вашингтон</option>
+          </select>
+        </div>
+      </div>
+      <div class="burger__menu-item"> 
+        <p class="title">ПОГОДА  </p>
+        <ul class="burger__menu-list"> 
+          <li> <a href="#"> <i class="fa-solid fa-earth-americas"></i><span>Каталог стран</span></a></li>
+          <li> <a href="#"> <i class="fa-solid fa-map"></i><span>Погода на карте</span></a></li>
+          <li> <a href="#"> <i class="fa-solid fa-water"></i><span>Температура воды</span></a></li>
+          <li> <a href="#"> <i class="fa-solid fa-tablet-screen-button"></i><span>Погода на карте</span></a></li>
+        </ul>
+        <p class="title">СОЦ СЕТИ  </p>
+        <ul class="burger__menu-social"> 
+          <li> <a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+          <li> <a href="#"><i class="fa-brands fa-telegram telegram"></i></a></li>
+          <li> <a href="#"><i class="fa-brands fa-facebook facebook"></i></a></li>
+          <li> <a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="overlay">  </div>
+    <section class="main__section container"> 
+      <main> 
+        <section class="main"> 
+          <h1 class="main_title">Погода в Ташкенте на сегодня</h1>
+          <h2 class="main_subtitle">Сейчас в Ташкенте 16:20 - 25 Января, Среда</h2>
+          <div class="temperature">
+            <div class="temperature-today">
+              <div class="temperature-today_tem"> <span>-3°</span>
+                <div class="icon"> </div>
+              </div>
+              <div class="feels">
+                 По ощущениям<span>-2°</span>
+                <div class="cool">Прохладно</div>
+                <div class="normal">Нормально</div>
+                <div class="verycold">Очень холодно</div>
+                <div class="warm">Тепло</div>
+              </div>
+            </div>
+            <ul class="temperature-hourly">
+              <li><span class="when">Ночью</span>
+                <div class="icon"> </div><span class="temp">-3°</span><span class="feel">Прохладно</span>
+              </li>
+              <li><span class="when">Утром</span>
+                <div class="icon"> </div><span class="temp">-3°</span><span class="feel">Прохладно</span>
+              </li>
+              <li><span class="when">Днём</span>
+                <div class="icon"> </div><span class="temp">-0°</span><span class="feel">Прохладно</span>
+              </li>
+              <li><span class="when">Вечером</span>
+                <div class="icon"> </div><span class="temp">-2°</span><span class="feel">Прохладно</span>
+              </li>
+            </ul>
+          </div>
+          <h3 class="main_feel">Облачно с прояснениями, без осадков</h3>
+          <div class="atmosphere"> 
+            <ul>
+              <li> 
+                <p>Вероятность осадков</p>
+                <div class="atmosphere-spec"><i class="fa-solid fa-umbrella"></i><span>  0</span>
+                  <p>  %</p>
+                </div>
+              </li>
+              <li> 
+                <p>Ветер</p>
+                <div class="atmosphere-spec"><img src="img/icons/wind-icon.svg" alt="wind"/><span>  1</span>
+                  <p> м/с</p>
+                </div>
+              </li>
+              <li> 
+                <p>Давление</p>
+                <div class="atmosphere-spec"><i class="fa-solid fa-ruler-vertical"></i><span>  629</span></div>
+              </li>
+              <li> 
+                <p>УФ индес</p>
+                <div class="atmosphere-spec"><b>UV</b><span>  3/12</span></div>
+              </li>
+              <li> 
+                <p>Влажность</p>
+                <div class="atmosphere-spec"><i class="fa-solid fa-droplet"></i><span>  30</span>
+                  <p>  %</p>
+                </div>
+              </li>
+              <li> 
+                <p>Осадки</p>
+                <div class="atmosphere-spec"><i class="fa-solid fa-water"></i><span>  0</span>
+                  <p>мм</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="main_info">Прогноз погоды обновлен в 10:07 © Meteoprog.com</p>
+        </section>
+        <section class="day_by_day">
+          <div class="swiper">
+            <div class="swiper_item active"> 
+              <h6>Сегодня</h6><span>27 января</span>
+              <div class="tem">
+                <div class="icon"> </div>
+                <div> 
+                  <div class="max">-8°C</div>
+                  <div class="min">-1°C</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper_item">  
+              <h6>Завтра</h6><span>28 января</span>
+              <div class="tem">
+                <div class="icon"> </div>
+                <div> 
+                  <div class="max">-8°C</div>
+                  <div class="min">-1°C</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper_item">  
+              <h6>Воскресенье</h6><span>28 января</span>
+              <div class="tem">
+                <div class="icon"> </div>
+                <div> 
+                  <div class="max">-8°C</div>
+                  <div class="min">-1°C</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper_item">  
+              <h6>Понедельник</h6><span>28 января</span>
+              <div class="tem">
+                <div class="icon"> </div>
+                <div> 
+                  <div class="max">-8°C</div>
+                  <div class="min">-1°C</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper_item"><a href="#"> 
+                <h6>Неделя</h6><i class="fa-solid fa-arrow-right"></i></a></div>
+          </div>
+          <div class="info"> 
+            <div class="info_item"> 
+              <div class="times_of_day"> 
+                <ul> 
+                  <li class="title">Ночью</li>
+                  <li class="icon"></li>
+                  <li class="tem">+2°C</li>
+                  <li class="feels">
+                     Ощущается <br/>как <b>+2°C</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-umbrella"></i><b>0%</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-water"></i>0<small> мм</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-left-long wind"></i>2<small> м/с</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-droplet"></i>40%</li>
+                  <li class="weather_info"> <i class="fa-solid fa-ruler-vertical"></i>629 <small>мм</small></li>
+                </ul>
+                <ul> 
+                  <li class="title">Утром</li>
+                  <li class="icon"></li>
+                  <li class="tem">+2°C</li>
+                  <li class="feels">
+                     Ощущается <br/>как <b>+2°C</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-umbrella"></i><b> 0%</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-water"></i>0<small> мм</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-left-long wind"></i>2<small> м/с</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-droplet"></i>40%</li>
+                  <li class="weather_info"> <i class="fa-solid fa-ruler-vertical"></i>629 <small>мм</small></li>
+                </ul>
+                <ul> 
+                  <li class="title">Днём</li>
+                  <li class="icon"></li>
+                  <li class="tem">+2°C</li>
+                  <li class="feels">
+                     Ощущается <br/>как <b>+2°C</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-umbrella"></i><b> 0%</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-water"></i>0<small> мм</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-left-long wind"></i>2<small> м/с</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-droplet"></i>40%</li>
+                  <li class="weather_info"> <i class="fa-solid fa-ruler-vertical"></i>629 <small>мм</small></li>
+                </ul>
+                <ul> 
+                  <li class="title">Вечером</li>
+                  <li class="icon"></li>
+                  <li class="tem">+2°C</li>
+                  <li class="feels">
+                     Ощущается <br/>как <b>+2°C</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-umbrella"></i><b> 0%</b></li>
+                  <li class="weather_info"> <i class="fa-solid fa-water"></i>0<small> мм</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-left-long wind"></i>2<small> м/с</small></li>
+                  <li class="weather_info"> <i class="fa-solid fa-droplet"></i>40%</li>
+                  <li class="weather_info"> <i class="fa-solid fa-ruler-vertical"></i>629 <small>мм</small></li>
+                </ul>
+              </div><span class="description">Погода в Ташкенте: Облачно, без осадков</span>
+            </div>
+            <div class="overall_day"> 
+              <div class="box">
+                <h3>Астрономия</h3>
+                <ul> 
+                  <li> 
+                    <div class="day_icon sun"></div>
+                    <div class="text"> <span>Восход</span><b>07:37</b></div>
+                  </li>
+                  <li> 
+                    <div class="day_icon sunset"></div>
+                    <div class="text"> <span>Закат</span><b>17:34</b></div>
+                  </li>
+                  <li> 
+                    <div class="day_icon sunny"></div>
+                    <div class="text"> <span>Световой день</span><b>09:57:24</b></div>
+                  </li>
+                  <li> 
+                    <div class="day_icon moon"></div>
+                    <div class="text"> <span>Фаза луны</span><b>Первая четверть</b></div>
+                  </li>
+                </ul>
+              </div><a class="overall_day-btn">почасовой<i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </section>
+        <section class="information"> 
+          <h2 class="section__title">Ташкент: справочная информация</h2>
+          <div class="information__box"> 
+            <div class="information__tab"> 
+              <div class="information__btn active">Астрономия</div>
+              <div class="information__btn">География</div>
+            </div>
+            <div class="information__items">
+              <div class="tabsContentItem active">
+                <div class="day__circle"><a class="day__circle-timezone" href="#">Местное время GMT +5</a>
+                  <h3 class="day__circle-time">03:53</h3>
+                  <div class="day__circle-wrapper"> 
+                    <div class="circle__item"> 
+                      <div class="circle__icon"> </div>
+                      <div class="circle__text"> 
+                        <div class="day__status">Световой день</div>
+                        <div class="day__time">10:03:59</div>
+                      </div>
+                    </div>
+                    <div class="circle__center"> 
+                      <div class="circle__item"> 
+                        <div class="circle__icon sunrise"></div>
+                        <div class="circle__text"> 
+                          <div class="day__status">Восход</div>
+                          <div class="day__time">07:34</div>
+                        </div>
+                      </div>
+                      <div class="earth"></div>
+                      <div class="circle__item"> 
+                        <div class="circle__icon sunset"></div>
+                        <div class="circle__text"> 
+                          <div class="day__status">Закат</div>
+                          <div class="day__time">17:38</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="circle__item moon">
+                      <div class="circle__icon">🌓</div>
+                      <div class="circle__text"> 
+                        <div class="day__status">Световой день</div>
+                        <div class="day__time">полная</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tabsContentItem"> 
+                <div class="twilight__info"> 
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-location-crosshairs"></i></span>
+                    <div>
+                      <h3>Географические координаты</h3><span>41° 19′ 1″ с.ш. 69° 15′ 0″ в.д.</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-regular fa-compass"></i></span>
+                    <div>
+                      <h3>Десятичные координаты</h3><span>41,32 69,25</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-water"></i></span>
+                    <div>
+                      <h3>Высота над уровнем моря</h3><span>456 м</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-people-group"></i></span>
+                    <div>
+                      <h3>Население</h3><span>2 909 500 человек</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-star-of-life"></i></span>
+                    <div>
+                      <h3>Сумерки Гражданские</h3><span>07:06 / 18:06</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-star-of-life"></i></span>
+                    <div>
+                      <h3>Сумерки Астрономические</h3><span>06:00 / 19:12</span>
+                    </div>
+                  </div>
+                  <div class="twilight__info-item"><span> <i class="fa-solid fa-star-of-life"></i></span>
+                    <div>
+                      <h3>Сумерки Навигационные</h3><span>06:33 / 18:39</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="day_history"> 
+          <div class="day_history-header"> 
+            <div class="info"> 
+              <h3>День в истории</h3>
+              <div class="date">30 Января </div>
+            </div>
+            <div class="logo"><img src="img/icons/pie.svg" alt="pie"/></div>
+          </div>
+          <div class="day_history-content"> 
+            <p>Максимальная температура воздуха, зарегистрированная в Ташкенте за последние 74 года наблюдений составляет +18°C, зафиксирована 30 января 2007 года.</p>
+            <p>Самые сильные осадки в Ташкенте были зарегистрированы 30 января 2019 года — 16,86 мм. Максимальные порывы ветра были в 2014 году — до 12,44 м/с.</p>
+            <p>Абсолютный минимум -17,3°C был зафиксирован в 1971 году. Среднее значение температуры для этого дня +8,6°C.</p>
+          </div>
+        </section>
+        <section class="map"> 
+          <h2 class="section__title">Погода на карте</h2>
+          <div class="map__item">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191885.5026400951!2d69.13928184107841!3d41.28251254496256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b0cc379e9c3%3A0xa5a9323b4aa5cb98!2z0KLQsNGI0LrQtdC90YIsINCj0LfQsdC10LrQuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1675331091803!5m2!1sru!2s" width="100%" height="100%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        </section>
+        <section class="regions"> 
+          <h2 class="section__title">Погода на карте</h2>
+          <div class="regions__wrapper"> 
+            <div class="regions__header"> 
+              <div class="regions__pick active">Узбекистан</div>
+              <div class="regions__pick">Мир</div>
+            </div>
+            <div class="regions__content">
+              <ul class="regions__list active">
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Ташкент
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+5°</span>
+                    </div></a></li>
+              </ul>
+              <ul class="regions__list">
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+                <li class="regions__list-item"><a class="region" href="#">Лондон
+                    <div class="region__temperature"> 
+                      <div class="icon"> </div><span>+10°</span>
+                    </div></a></li>
+              </ul>
+            </div><a class="regions__btn">все города<i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </section>
+      </main>
+      <aside> 
+        <div class="day_history"> 
+          <div class="day_history-header"> 
+            <div class="info"> 
+              <h3>День в истории</h3>
+              <div class="date">30 Января </div>
+            </div>
+            <div class="logo"><img src="img/icons/pie.webp" alt="pie"/></div>
+          </div>
+          <div class="day_history-content"> 
+            <p>Максимальная температура воздуха, зарегистрированная в Ташкенте за последние 74 года наблюдений составляет +18°C, зафиксирована 30 января 2007 года.</p>
+            <p>Самые сильные осадки в Ташкенте были зарегистрированы 30 января 2019 года — 16,86 мм. Максимальные порывы ветра были в 2014 году — до 12,44 м/с.</p>
+            <p>Абсолютный минимум -17,3°C был зафиксирован в 1971 году. Среднее значение температуры для этого дня +8,6°C.</p>
+          </div>
+        </div>
+      </aside>
+    </section>
+    <footer>
+      <div class="container"> 
+        <div class="footer__date">
+          <div class="select__city">
+            <div class="search"> <i class="fa-solid fa-location-dot"></i></div>
+            <div class="down"><i class="fa-sharp fa-solid fa-caret-down"></i></div>
+            <select> 
+              <option value="Москва">Москва</option>
+              <option value="Ташкент" selected="selected">Ташкент </option>
+              <option value="Вашингтон">Вашингтон</option>
+            </select>
+          </div>
+          <div class="select__date"> 
+            <ul> 
+              <li class="select__date-item"><a href="#">сегодня</a></li>
+              <li class="select__date-item"><a href="#">завтра    </a></li>
+              <li class="select__date-item"><a href="#">неделя   </a></li>
+              <li class="select__date-item"><a href="#">выходные </a></li>
+              <li class="select__date-item"><a href="#">две недели</a></li>
+              <li class="select__date-item"><a href="#">месяц</a></li>
+              <li class="select__date-item"><a href="#">почасавой </a></li>
+              <li class="select__date-item"><a href="#">время </a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__content"> <a class="logo" href="#">pogoda<span>.uz</span></a>
+          <div class="lang"> <span><i class="fa-solid fa-earth-americas"></i></span>RU <i class="fa-sharp fa-solid fa-caret-down"></i>
+            <div class="lang__items"> 
+              <ul> 
+                <li> <a href="">Русский</a></li>
+                <li> <a href="">English </a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+                <li> <a href="">O'zbekcha</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <ul class="footer__nav"> 
+          <li> <a href="#">Информеры </a></li>
+          <li> <a href="#">О проекте </a></li>
+          <li> <a href="#">Пользовательские соглашения </a></li>
+          <li> <a href="#">Правовая информация </a></li>
+          <li> <a href="#">Политика конфедециальности</a></li>
+          <li> <a href="#">Настройки файлов cookie </a></li>
+        </ul>
+        <div class="footer__copyright">
+           <p>© Pogoda.uz 2022-2023</p>
+          <ul class="footer__social"> 
+            <li> <a href="#"><i class="fa-brands fa-youtube youtube"></i></a></li>
+            <li> <a href="#"><i class="fa-brands fa-telegram telegram"></i></a></li>
+            <li> <a href="#"><i class="fa-brands fa-facebook facebook"></i></a></li>
+            <li> <a href="#"><i class="fa-brands fa-instagram instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="js/app.min.js?_v=20230206160945"> </script>
+  </body>
+</html>
